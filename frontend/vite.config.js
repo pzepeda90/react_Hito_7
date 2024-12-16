@@ -6,7 +6,12 @@ export default defineConfig({
   plugins: [react()],
   build: {
     rollupOptions: {
-      external: ['sweetalert2']
+      external: ['sweetalert2'],
+      output: {
+        globals: {
+          sweetalert2: 'Sweetalert2'
+        }
+      }
     }
   }
 })
