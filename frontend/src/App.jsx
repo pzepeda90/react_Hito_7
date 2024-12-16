@@ -13,7 +13,7 @@ import { CartProvider } from './context/CartContext';
 import { UserProvider } from './context/UserContext';
 import { ProtectedRoute } from './components/ProtectedRoute/ProtectedRoute';
 import { PublicRoute } from './components/ProtectedRoute/ProtectedRoute';
-import Swal from 'sweetalert2/dist/sweetalert2.js'
+import Swal from 'sweetalert2'
 
 function App() {
   return (
