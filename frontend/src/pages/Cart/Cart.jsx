@@ -3,6 +3,7 @@ import { CartContext } from '../../context/CartContext';
 import { UserContext } from '../../context/UserContext';
 import { Container, Button, ListGroup, Image } from 'react-bootstrap';
 import './cart.css'
+import Swal from 'sweetalert2'
 
 
 const Cart = () => {
