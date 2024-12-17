@@ -1,21 +1,27 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
-import Swal from 'sweetalert2'
 
 export default defineConfig({
   plugins: [react()],
   build: {
+    commonjsOptions: {
+      include: [/sweetalert2/],
+    },
     rollupOptions: {
-      external: ['sweetalert2', 'sweetalert2/dist/sweetalert2.js'],
+      external: ['sweetalert2'],
       output: {
         globals: {
-          'sweetalert2': 'Swal',
-          'sweetalert2/dist/sweetalert2.js': 'Swal'
+          'sweetalert2': 'Swal'
+        },
+        paths: {
+          'sweetalert2/dist/sweetalert2.js': 'sweetalert2'
         }
       }
     }
   },
-  optimizeDeps: {
-    include: ['sweetalert2']
+  resolve: {
+    alias: {
+      'sweetalert2/dist/sweetalert2.js': 'sweetalert2'
+    }
   }
 })
