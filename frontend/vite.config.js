@@ -1,4 +1,3 @@
-// vite.config.js
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
@@ -7,6 +6,11 @@ export default defineConfig({
   build: {
     rollupOptions: {
       external: ['sweetalert2']
+    }
+  },
+  resolve: {
+    alias: {
+      'sweetalert2': 'sweetalert2/dist/sweetalert2.js'
     }
   }
 })
