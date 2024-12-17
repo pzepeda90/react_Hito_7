@@ -6,8 +6,7 @@ import { PiEyesFill } from 'react-icons/pi'
 import { FaCartArrowDown } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
 import { CartContext } from '../../context/CartContext'
-import Swal from 'sweetalert2/dist/sweetalert2.js'
-import 'sweetalert2/dist/sweetalert2.css'
+import Swal from 'sweetalert2'
 import './cardPizza.css'
 
 const CardPizza = ({ id, img, ingredients, name, price }) => {
